@@ -10,6 +10,10 @@
     p, h1, h2, h3, h4, h5, h6 {
       margin: 1rem 2rem;
     }
+    section {
+      margin: 0 auto;
+      max-width: 1000px;
+    }
     .video-container {
       width: 100%;
       height: auto;
@@ -60,6 +64,27 @@
       background: linear-gradient(to bottom right, pink, orange);
       opacity: 0.2;
     }
+    .backgroundWashBW {
+      position: absolute;
+      left: 0;
+      top: -20px;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+      background-color: pink;
+      background: linear-gradient(to right, red, orange, yellow, green, blue, purple);
+      opacity: 0.4;
+    }
+    .backgroundWashMood {
+      position: absolute;
+      left: 0;
+      top: -20px;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+      background: radial-gradient(ellipse at center, transparent, black);
+      opacity: 1;
+    }
     .button {
       font-size: 0.8rem;
       text-transform: uppercase;
@@ -83,6 +108,7 @@
     <p>
       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     </p>
+    <h3>1080p WebM 6meg Pink/Orange Overlay Opacity 20%</h3>
     <div class="video-container">
       <div class="backgroundWash"></div>
       <video class="html5video" id="videotest" poster="poster.jpg" preload="auto" loop="true" muted="true" autoplay>
@@ -98,9 +124,33 @@
     <p>
       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     </p>
+    <h3>720p WebM Black & White 3meg Rainbow Overlay Opacity 40%</h3>
+    <div class="video-container">
+      <div class="backgroundWashBW"></div>
+      <video class="html5video" id="videotest" poster="poster.jpg" preload="auto" loop="true" muted="true" autoplay>
+        <source src="bw.webm" type="video/webm;">
+      </video>
+      <div class="overlayTxt">
+        <img src="CLC_Logo_XSmall_WHITE.svg" /><br/><br/>
+        ENGINEERING, ENTERPRISE & TECHNOLOGY<br/>
+        <span class="button">Find out more</span>
+      </div>
+    </div>
     <p>
       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     </p>
+    <h3>1080p WebM 6meg Mood Overlay Opacity 50%</h3>
+    <div class="video-container">
+      <div class="backgroundWashMood"></div>
+      <video class="html5video" id="videotest" poster="poster.jpg" preload="auto" loop="true" muted="true" autoplay>
+        <source src="webmversion.webm" type="video/webm;">
+      </video>
+      <div class="overlayTxt">
+        <img src="CLC_Logo_XSmall_WHITE.svg" /><br/><br/>
+        ENGINEERING, ENTERPRISE & TECHNOLOGY<br/>
+        <span class="button">Find out more</span>
+      </div>
+    </div>
     <p>
       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     </p>
