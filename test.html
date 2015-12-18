@@ -67,11 +67,21 @@
     .Rainbow {
       background: linear-gradient(to left, red, orange, yellow, green, blue, purple);
       opacity: 0.4;
-      height: 35%;
+      height: 120px;
       margin-top: 18%;
     }
     .Mood {
       background: radial-gradient(ellipse at center, transparent, black);
+      opacity: 1;
+    }
+    .Band {
+      background: rgb(24, 105, 73);
+      opacity: 0.4;
+      height: 35%;
+      margin-top: 18%;
+    }
+    .Blend {
+      background:  linear-gradient(to top, black, transparent);
       opacity: 1;
     }
     .button {
@@ -107,7 +117,31 @@
         <span class="button">Find out more</span>
       </div>
     </div>
-    <h3>720p WebM Black & White 3meg Rainbow Stripe Overlay Opacity 40%</h3>
+    <h3>1080p WebM 6meg Moody Vignette Overlay Opacity 50%</h3>
+    <div class="video-container">
+      <div class="backgroundWash Mood"></div>
+      <video class="html5video" id="videotest" poster="poster.jpg" preload="auto" loop="true" muted="true" autoplay>
+        <source src="webmversion.webm" type="video/webm;">
+      </video>
+      <div class="overlayTxt">
+        <img src="CLC_Logo_XSmall_WHITE.svg" /><br/><br/>
+        ENGINEERING, ENTERPRISE & TECHNOLOGY<br/>
+        <span class="button">Find out more</span>
+      </div>
+    </div>
+    <h3>1080p WebM Black & White Blend Up Overlay Opacity 40%</h3>
+    <div class="video-container">
+      <div class="backgroundWash Blend"></div>
+      <video class="html5video" id="videotest" poster="poster.jpg" preload="auto" loop="true" muted="true" autoplay>
+        <source src="webmversion.webm" type="video/webm;">
+      </video>
+      <div class="overlayTxt">
+        <img src="CLC_Logo_XSmall_WHITE.svg" /><br/><br/>
+        ENGINEERING, ENTERPRISE & TECHNOLOGY<br/>
+        <span class="button">Find out more</span>
+      </div>
+    </div>
+    <h3>720p WebM Black & White Rainbow Stripe Overlay Opacity 40%</h3>
     <div class="video-container">
       <div class="backgroundWash Rainbow"></div>
       <video class="html5video" id="videotest" poster="poster.jpg" preload="auto" loop="true" muted="true" autoplay>
@@ -119,11 +153,11 @@
         <span class="button">Find out more</span>
       </div>
     </div>
-    <h3>1080p WebM 6meg Moody Vignette Overlay Opacity 50%</h3>
+    <h3>720p WebM Black & White Color Band Overlay Opacity 40%</h3>
     <div class="video-container">
-      <div class="backgroundWash Mood"></div>
+      <div class="backgroundWash Band"></div>
       <video class="html5video" id="videotest" poster="poster.jpg" preload="auto" loop="true" muted="true" autoplay>
-        <source src="webmversion.webm" type="video/webm;">
+        <source src="bw.webm" type="video/webm;">
       </video>
       <div class="overlayTxt">
         <img src="CLC_Logo_XSmall_WHITE.svg" /><br/><br/>
