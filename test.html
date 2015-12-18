@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/atomicjam/bootstrap/master/clc_bootstrap.css">
   <style>
-    body {
+    body, html {
       margin: 0;
+      padding: 0;
     }
-    p {
-      padding: 1rem 2rem;
+    p, h1, h2, h3, h4, h5, h6 {
+      margin: 1rem 2rem;
     }
-    .container {
+    .video-container {
       width: 100%;
       height: auto;
       opacity: 1;
       position: relative;
-      min-height: 120px;
+      min-height: 200px;
       padding: 0;
       margin: 0;
       overflow: hidden;
@@ -23,7 +25,7 @@
       height: auto;
       object-fit: cover;
     }
-    .vid {
+    .html5video {
       display: inline-block;
       z-index: 1;
 
@@ -43,56 +45,54 @@
       text-rendering: optimizeLegibility;
     }
     .overlayTxt img {
-      margin: 1rem;
+      margin: 0.4rem;
       width: auto;
-      height: 10vw;
+      height: 90px;
     }
     .backgroundWash {
       position: absolute;
       left: 0;
-      top: 0;
+      top: -20px;
       width: 100%;
       height: 100%;
       z-index: 2;
       background-color: pink;
+      background: linear-gradient(to bottom right, pink, orange);
       opacity: 0.2;
     }
     .button {
       font-size: 0.8rem;
       text-transform: uppercase;
-      margin-top: 1rem;
+      margin-top: 2rem;
       display: inline-block;
       padding: 0.3rem 1rem;
       border: 1px solid white;
       border-radius: 5px;
       cursor: pointer;
+      transition: all 0.5s ease;
     }
     .button:hover {
-      background-color: rgba(255,255,255,0.2);
+      border: 1px solid rgb(204, 138, 61);
+      color: rgb(204, 138, 61);
     }
   </style>
 </head>
 <body>
   <section>
+    <h2>WebM Video test</h2>
     <p>
       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     </p>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </p>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </p>
-    <div class="container">
-      <video class="vid" id="vidtest" poster="/images/poster.jpg" preload="auto" loop="true" muted="true" autoplay>
-        <source src="EET 4k-min.webm" type="video/webm;">
-        <source src="webcut.mp4" type="video/mp4; codecs="avc1.42E01E, mp4a.40.2"">
-      </video>
+    <div class="video-container">
       <div class="backgroundWash"></div>
+      <video class="html5video" id="videotest" poster="poster.jpg" preload="auto" loop="true" muted="true" autoplay>
+        <source src="webmversion.webm" type="video/webm;">
+        <source src="mp4version.mp4" type="video/mp4; codecs="avc1.42E01E, mp4a.40.2"">
+      </video>
       <div class="overlayTxt">
         <img src="CLC_Logo_XSmall_WHITE.svg" /><br/><br/>
         ENGINEERING, ENTERPRISE & TECHNOLOGY<br/>
-        <span class="button">find out more</span>
+        <span class="button">Find out more</span>
       </div>
     </div>
     <p>
