@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cube Test with Webm Video</title>
+  <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/atomicjam/bootstrap/master/clc_bootstrap.css" />
+  <link rel="stylesheet" type="text/css" href="css/cube.css" />
+</head>
+<body>
+<h2>HTML5 Video webm with CSS3 transforms</h2>
+  <section class="cube-container">
+    <div id="cube">
+      <figure class="front">
+        <div class="video-container">
+          <div class="backgroundWash Mood"></div>
+          <video class="html5video" id="videotest" poster="images/poster.jpg" preload="auto" loop="true" muted="true" autoplay>
+            <source src="media/webmversion.webm" type="video/webm;">
+          </video>
+          <div class="overlayTxt">
+            <img src="images/CLC_Logo_XSmall_WHITE.svg" /><br/>
+            ENGINEERING, ENTERPRISE & TECHNOLOGY
+          </div>
+        </div>
+      </figure>
+      <figure class="back">
+        <div class="video-container">
+          <div class="backgroundWash Mood"></div>
+          <video class="html5video" id="videotest" poster="images/poster.jpg" preload="auto" loop="true" muted="true" autoplay>
+            <source src="media/webmversion.webm" type="video/webm;">
+          </video>
+          <div class="overlayTxt">
+            <img src="images/CLC_Logo_XSmall_WHITE.svg" /><br/>
+            Back Face Video
+          </div>
+      </figure>
+      <figure class="right">
+        <div class="video-container">
+          <div class="backgroundWash Mood"></div>
+          <video class="html5video" id="videotest" poster="images/poster.jpg" preload="auto" loop="true" muted="true" autoplay>
+            <source src="media/webmversion.webm" type="video/webm;">
+          </video>
+          <div class="overlayTxt">
+            <img src="images/CLC_Logo_XSmall_WHITE.svg" /><br/>
+            Right Face Video
+          </div>
+      </figure>
+      <figure class="left">
+        <div class="video-container">
+          <div class="backgroundWash Mood"></div>
+          <video class="html5video" id="videotest" poster="images/poster.jpg" preload="auto" loop="true" muted="true" autoplay>
+            <source src="media/webmversion.webm" type="video/webm;">
+          </video>
+          <div class="overlayTxt">
+            <img src="images/CLC_Logo_XSmall_WHITE.svg" /><br/>
+            Left Face Video
+          </div>
+      </figure>
+      <figure class="top">
+        <div class="video-container">
+          <div class="backgroundWash Mood"></div>
+          <video class="html5video" id="videotest" poster="images/poster.jpg" preload="auto" loop="true" muted="true" autoplay>
+            <source src="media/webmversion.webm" type="video/webm;">
+          </video>
+          <div class="overlayTxt">
+            <img src="images/CLC_Logo_XSmall_WHITE.svg" /><br/>
+            Top Face Video
+          </div>
+      </figure>
+      <figure class="bottom">
+        <div class="video-container">
+          <div class="backgroundWash Mood"></div>
+          <video class="html5video" id="videotest" poster="images/poster.jpg" preload="auto" loop="true" muted="true" autoplay>
+            <source src="media/webmversion.webm" type="video/webm;">
+          </video>
+          <div class="overlayTxt">
+            <img src="images/CLC_Logo_XSmall_WHITE.svg" /><br/>
+            Bottom Face Video
+          </div>
+      </figure>
+    </div>
+  </section>
+<br/><br/><br/>
+  <section id="options">
+
+      <p id="show-buttons">
+        <button class="show-front">ENGINEERING, ENTERPRISE & TECHNOLOGY</button><br/>
+        <button class="show-back">Back Face</button><br/>
+        <button class="show-right">Right Face</button><br/>
+        <button class="show-left">Left Face</button><br/>
+        <button class="show-top">Top Face</button><br/>
+        <button class="show-bottom">Bottom Face</button><br/>
+      </p>
+
+    </section>
+<script type="text/javascript">
+Element.prototype.hasClassName = function (a) {
+    return new RegExp("(?:^|\\s+)" + a + "(?:\\s+|$)").test(this.className);
+};
+
+Element.prototype.addClassName = function (a) {
+    if (!this.hasClassName(a)) {
+        this.className = [this.className, a].join(" ");
+    }
+};
+
+Element.prototype.removeClassName = function (b) {
+    if (this.hasClassName(b)) {
+        var a = this.className;
+        this.className = a.replace(new RegExp("(?:^|\\s+)" + b + "(?:\\s+|$)", "g"), " ");
+    }
+};
+
+Element.prototype.toggleClassName = function (a) {
+    this[this.hasClassName(a) ? "removeClassName" : "addClassName"](a);
+};
+
+
+
+var init = function() {
+  var box = document.querySelector('.cube-container').children[0],
+      showPanelButtons = document.querySelectorAll('#show-buttons button'),
+      panelClassName = 'show-front',
+
+      onButtonClick = function( event ){
+        box.removeClassName( panelClassName );
+        panelClassName = event.target.className;
+        box.addClassName( panelClassName );
+      };
+
+  for (var i=0, len = showPanelButtons.length; i < len; i++) {
+    showPanelButtons[i].addEventListener( 'click', onButtonClick, false);
+  }
+};
+window.addEventListener( 'DOMContentLoaded', init, false);
+
+</script>
+
+
+</body>
+</html>
